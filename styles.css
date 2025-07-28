@@ -1,4 +1,4 @@
-/* max_off_the_code */
+/* max_off_the_code: Normalize the sheets */
 
 /* use a more-intuitive box-sizing model */
 
@@ -50,4 +50,24 @@ h1, h2, h3, h4, h5, h6 {
  text-wrap: balance;
 }
 
-/* Undo a 
+/* Actual Styling */
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background-color: #0E0E0E;
+
+    background-image: url(image/dashboard-project.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    display: grid;
+    align-items: center;
+}
+
+.dashboard_container {
+    width: clamp(500px, 100%, 1312px);
+    height: min(100%, calc(100vw * 12/17));
+    justify-self: center;
+}
