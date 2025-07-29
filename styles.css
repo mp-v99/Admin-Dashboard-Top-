@@ -1,5 +1,14 @@
 /* max_off_the_code: Normalize the sheets */
 
+@font-face {
+    font-family: 'Roboto';
+    src: url('Roboto-Regular.woff2') format('woff2'),
+        url('Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* use a more-intuitive box-sizing model */
 
 *, *::before, *::after {
@@ -80,19 +89,33 @@ body {
     grid-column: 2 / 3;
     grid-row: 1 / 2;
 
-    background: #ffffff;
+    /* background: #ffffff; */
 }
 
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    background: #e2e8f0;
+    /* background: #e2e8f0; */
 }
 
 .sidebar {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 
-    background: #1992d4;
+    /* background: #1992d4; */
+    display: grid;
+    grid-template-columns: 25fr 75fr;
+    grid-template-rows: 1fr 1fr;
 }
+
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+svg {
+    fill: #ffffff;
+}
+
