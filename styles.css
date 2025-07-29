@@ -69,5 +69,11 @@ body {
 .dashboard_container {
     width: clamp(500px, 100%, 1312px);
     height: min(100%, calc(100vw * 12/17));
+
     justify-self: center;
+
+    display: grid;
+    grid-template: 17.2fr 82.7fr / 21.06fr 78.93fr; 
+    border: 1px solid red;
 }
+
