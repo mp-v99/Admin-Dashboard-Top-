@@ -2,8 +2,8 @@
 
 @font-face {
     font-family: 'Roboto';
-    src: url('Roboto-Regular.woff2') format('woff2'),
-        url('Roboto-Regular.woff') format('woff');
+    src: url('font-family/woff_fonts/Roboto-Regular.woff2') format('woff2'),
+        url('font-family/woff_fonts/Roboto-Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -13,6 +13,7 @@
 
 *, *::before, *::after {
  box-sizing: border-box;
+ font-family: "Roboto";
 }
 /*  remove default margin */
 * {
