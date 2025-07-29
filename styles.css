@@ -13,7 +13,7 @@
 
 *, *::before, *::after {
  box-sizing: border-box;
- font-family: "Roboto";
+ font-family: "Roboto", Arial, Helvetica, sans-serif;
 }
 /*  remove default margin */
 * {
@@ -107,7 +107,7 @@ body {
     /* background: #1992d4; */
     display: grid;
     grid-template-columns: 25fr 75fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 10fr 30fr 60fr;
 }
 
 li {
@@ -118,5 +118,10 @@ li {
 
 svg {
     fill: #ffffff;
+}
+
+.logo-icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
 }
 
