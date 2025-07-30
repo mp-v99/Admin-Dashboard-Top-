@@ -65,11 +65,11 @@ body {
     height: 100vh;
     width: 100vw;
     background-color: #0E0E0E;
-/* 
+
     background-image: url(image/dashboard-project.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 
     display: grid;
     align-items: center;
@@ -84,13 +84,6 @@ body {
 
     display: grid;
     grid-template: 17.2fr 82.7fr / 21.06fr 78.93fr; 
-}
-
-.header {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
-    /* background: #ffffff; */
 }
 
 .main-content {
@@ -114,6 +107,7 @@ body {
     grid-template-rows: 10fr 35fr 55fr;
 
     color: #ffffff;
+    font-weight: bold;
 }
 
 .sidebar ul {
@@ -204,4 +198,21 @@ li>svg {
 
     align-items: center;
     justify-content: center;
+}
+
+
+/* Header layout */
+
+
+.header {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-columns: 62.13fr 37.86fr;
+    grid-template-rows: 44.87fr 55.12fr;
+
+    border: 1px solid red;
+
+    /* background: #ffffff; */
 }
