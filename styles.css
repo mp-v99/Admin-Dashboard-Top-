@@ -214,7 +214,7 @@ li>svg {
     grid-template-rows: 44.87fr 55.12fr;
 
 
-    background: #ffffff;
+    /* background: #ffffff; */
 }
 
 /* Search bar container: */
@@ -319,3 +319,29 @@ li>svg {
 
 }
 
+/* Profile Icons: */
+
+.profile-icons {
+    display: grid;
+    grid-template-columns: 34.33fr 16.66fr 49.001fr; 
+    grid-template-rows: 1fr;
+
+    border: 1px solid red;
+    
+}
+
+.profile-picture {
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 50%;
+}
+
+.profile-picture>img {
+    height: 64%;
+    width: 72%;
+
+    border-radius: 50%;
+    opacity: 1;
+}
