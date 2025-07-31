@@ -102,7 +102,6 @@ body {
     grid-row: 1 / 3;
 
     background: #1992d4;
-    opacity: 0;
     display: grid;
     grid-template-columns: 25fr 75fr;
     grid-template-rows: 10fr 35fr 55fr;
@@ -119,7 +118,7 @@ body {
     list-style: none;    
 }
 
-/* Main content */
+/* Sidebar>Main content layout */
 
 .sidebar>.main-labels {
     display: grid;
@@ -146,7 +145,7 @@ body {
     padding-bottom: 40px;
 }
 
-/* Dashboard Logo */
+/* Sidebar>Dashboard Logo */
 
 .logo-icon {
     display: flex;
@@ -172,7 +171,7 @@ li>svg {
     height: 20px;
 }
 
-/* Settings Content  */
+/* Sidebar>Settings Content  */
 
 .sidebar>.settings-labels {
     display: grid;
@@ -214,7 +213,7 @@ li>svg {
     grid-template-rows: 44.87fr 55.12fr;
 
 
-    /* background: #ffffff; */
+    background: #ffffff;
 }
 
 /* Search bar container: */
@@ -319,15 +318,12 @@ li>svg {
 
 }
 
-/* Profile Icons: */
+/* Profile Icon: */
 
 .profile-icons {
     display: grid;
     grid-template-columns: 34.33fr 16.66fr 49.001fr; 
     grid-template-rows: 1fr;
-
-    border: 1px solid red;
-    
 }
 
 .profile-picture {
@@ -344,4 +340,15 @@ li>svg {
 
     border-radius: 50%;
     opacity: 1;
+}
+
+/* Profile Name: */
+
+.profile-name {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+
+    font-size: 0.09rem;
+    font-weight: bold;
 }
