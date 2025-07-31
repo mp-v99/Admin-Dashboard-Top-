@@ -66,10 +66,10 @@ body {
     width: 100vw;
     background-color: #0E0E0E;
 
-    background-image: url(image/dashboard-project.png);
+    /* background-image: url(image/dashboard-project.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 
     display: grid;
     align-items: center;
@@ -214,7 +214,7 @@ li>svg {
     grid-template-rows: 44.87fr 55.12fr;
 
 
-    /* background: #ffffff; */
+    background: #ffffff;
 }
 
 /* Search bar container: */
@@ -287,7 +287,6 @@ li>svg {
     color: #323232;
 
     border-radius: 10px 0 0 10px;
-
 }
 
 .search-container>li button {
@@ -373,11 +372,10 @@ li>svg {
 
 }
 
-/* Welcome banner: */
+/* Greeting banner: */
 
 
 .profile-welcome {
-    border: 1px solid red;
     display: grid;
     grid-template-columns: 20fr 80fr;
 }
@@ -406,4 +404,50 @@ li>svg {
     font-size: .1rem;
 
     font-weight: bold;
+}
+
+/* Profile Buttons: */
+
+
+.buttons-container {
+    display: grid;
+    grid-template-columns: 88fr 12fr;
+}
+
+.profile-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+}
+
+.profile-buttons>button {
+    font-size: 0.1rem;
+    font-weight: bold;
+
+    height: 43%;
+    width: 76%;
+
+    justify-self: center;
+
+    outline: none;
+    border: none;
+
+    border-radius: 15px;
+
+    background: #1992d4;
+    color: #ffffff;
+
+    cursor: pointer;
+
+    transition: background-color 0.5s ease;
+}
+
+.profile-buttons>button:hover {
+    background: #1992d43d;
+    color: #1992d4;
+    border: #1992d4 1px solid;
+}
+
+.profile-buttons>button:active {
+    scale: 1.01;
 }
