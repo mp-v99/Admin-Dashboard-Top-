@@ -66,10 +66,10 @@ body {
     width: 100vw;
     background-color: #0E0E0E;
 
-    /* background-image: url(image/dashboard-project.png);
+    background-image: url(image/dashboard-project.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 
     display: grid;
     align-items: center;
@@ -85,14 +85,14 @@ body {
     display: grid;
     grid-template: 17.2fr 82.7fr / 21.06fr 78.93fr; 
 
-    background: #e2e8f0;
+    /* background: #e2e8f0; */
 }
 
 .main-content {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
 
-    background: transparent;
+    /* background: transparent; */
 }
 
 /* Sidebar layout: */
@@ -452,4 +452,33 @@ li>svg {
 
 .profile-buttons>button:active {
     scale: 1.01;
+}
+
+/* Main Dashboard Content: */
+
+.main-content {
+    display: grid;
+    grid-template-columns: 72fr 28fr;
+    grid-template-rows: 50fr 50fr;
+}
+
+.main-projects {
+    border: 5px solid green;
+
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+}
+
+.main-announcements {
+    border: 5px solid purple;
+
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+}
+
+.main-trending {
+    border: 5px solid orange;
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3
 }
