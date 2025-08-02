@@ -66,19 +66,18 @@ body {
     width: 100vw;
     background-color: #0E0E0E;
 
-    background-image: url(image/dashboard-project.png);
+    /* background-image: url(image/dashboard-project.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center; */
 
     display: grid;
-    align-items: center;
 }
 
 .dashboard_container {
     width: clamp(500px, 100%, 1312px);
     min-width: 1040px;
-    height: min(100%, calc(100vw * 12/17));
+    height: 99%;
 
     justify-self: center;
 
@@ -103,7 +102,7 @@ body {
     grid-column: 1 / 2;
     grid-row: 1 / 3;
 
-    background: #1992d4;
+    /* background: #1992d4; */
     display: grid;
     grid-template-columns: 25fr 75fr;
     grid-template-rows: 10fr 35fr 55fr;
@@ -214,8 +213,10 @@ li>svg {
     grid-template-columns: 62.13fr 37.86fr;
     grid-template-rows: 44.87fr 55.12fr;
 
-    background: #ffffff;
+    /* background: #ffffff; */
     box-shadow: 0px 4px 5px 0px #918f8f49;
+
+    min-width: 943px;
 }
 
 /* Search bar container: */
@@ -471,14 +472,6 @@ li>svg {
     grid-template-rows: 7.5fr 92.5fr;
 }
 
-.main-announcements {
-    grid-column: 2 / 3;
-    grid-row: 1 / 2;
-
-    display: grid;
-    grid-template-rows: 15fr 85fr;
-}
-
 .main-trending {
     grid-column: 2 / 3;
     grid-row: 2 / 3;
@@ -489,11 +482,10 @@ li>svg {
 
 .title {
     font-size: 19px;
+    font-weight: bold;
 
     display: flex;
     align-items: flex-end;
-
-    padding-left: 2.5%;
 }
 
 /* Projects container */
@@ -503,6 +495,7 @@ li>svg {
 
     grid-column: 1 / 3;
     grid-row: 1 / 2;
+    
 }
 
 .main-projects>.project-cards {
@@ -512,13 +505,13 @@ li>svg {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
     grid-template-rows: 30fr 30fr 40fr;
-    column-gap: 30px;
+    column-gap: 20px;
     row-gap: 23px;
 
     font-size: 8px;
 
     padding-left: 16px;
-    padding-right: 7px; 
+    padding-right: 16px; 
     padding-top: 5px;
 
 }
@@ -537,7 +530,7 @@ li>svg {
     width: clamp(250px, 100%, 350px);
     height: 200px;
 
-    padding-left: 19px;
+
 
     overflow: auto;
 }
@@ -554,6 +547,9 @@ li>svg {
 
     display: flex;
     align-items: flex-end;
+
+    font-size: 1px;
+    transform: scale(0.9);
 }
 
 .card-description {
@@ -563,7 +559,8 @@ li>svg {
     color: rgba(106,106,106,255);
     line-height: 1;
 
-    font-size: xx-small;
+    font-size: 1px;
+    transform: scale(0.9);
 }
 
 .card-icons {
@@ -587,3 +584,109 @@ li>svg {
     width: auto;
 }
 
+/* Announcements Container */
+
+.main-announcements {
+    opacity: 1;
+    padding-left: 3%;
+
+    /* background-color: #e2e8f0; */
+    
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+
+    display: grid;
+    grid-template-rows: 17fr 83fr;
+}
+
+.main-announcements>title {
+    padding: 1.2%;
+}
+
+.announcements-card {
+    display: flex;
+    flex-direction: column;
+
+    background: #ffffff;
+
+    width: 88.5%;
+    min-width: 236.8px;
+    height: 95%;
+    max-height: 303px;
+    overflow: hidden;
+
+    border-radius: 8px;
+    box-shadow: 0px 4px 5px 0px #918f8f49;
+
+    opacity: 1;
+
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+.announcement {
+    flex: auto;
+    flex-wrap: wrap;
+
+    display: grid;
+    grid-template-rows: 10fr 40fr 40fr 10fr;
+    grid-template-columns: 10fr 80fr 10fr;
+}
+
+.announcement-title {
+    grid-row: 2 / 3;
+    grid-column: 2 / 3;
+
+    max-height: 23px;
+    max-width: 200px;
+
+    overflow: hidden;
+
+    align-self: flex-end;
+}
+
+.announcement-title>p {
+    font-weight: bold;
+    font-size: 1px;
+    transform: scale(0.7);
+    display: inline-block;
+    transform-origin: left;
+    width: fit-content;
+    height: fit-content;
+    overflow: hidden;
+}
+
+.announcement-description {
+
+    color: rgba(106,106,106,255);
+    
+    grid-row: 3 / 4;
+    grid-column: 2 / 3;
+
+
+    overflow: visible;
+
+    max-height: 5px;
+}
+
+.announcement-description>p {
+    line-height: 0.8;
+
+
+    font-size: 1px;
+    transform: scale(0.7);
+    display: inline-block;
+    transform-origin: left;
+    width: 300px;
+    height: 50px;
+
+    overflow: hidden;
+
+    align-self: flex-start;
+
+    border-bottom: #d2d2d2 1px solid;
+}
+
+.three>.announcement-description>p {
+    border-bottom: 0px;
+}
