@@ -66,10 +66,10 @@ body {
     width: 100vw;
     background-color: #0E0E0E;
 
-    /* background-image: url(image/dashboard-project.png);
+    background-image: url(image/dashboard-project.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center; */
+    background-position: center;
 
     display: grid;
 }
@@ -109,8 +109,6 @@ body {
 
     color: #ffffff;
     font-weight: bold;
-
-    opacity: 0;
 }
 
 .sidebar ul {
@@ -215,12 +213,11 @@ li>svg {
     grid-template-columns: 62.13fr 37.86fr;
     grid-template-rows: 44.87fr 55.12fr;
 
-    /* background: #ffffff; */
+    background: #ffffff;
     box-shadow: 0px 4px 5px 0px #918f8f49;
 
     min-width: 943px;
 
-    opacity: 0;
 }
 
 /* Search bar container: */
@@ -427,9 +424,6 @@ li>svg {
 }
 
 .profile-buttons>button {
-    font-weight: bold;
-    font-size: 1%;
-
     height: 43%;
     width: 80%;
 
@@ -438,12 +432,18 @@ li>svg {
     outline: none;
     border: none;
 
-    border-radius: 25px;
+    border-radius: 15px;
 
     background: #1992d4;
     color: #ffffff;
 
     cursor: pointer;
+}
+
+.profile-buttons>button>p {
+    font-weight: bold;
+    font-size: 1px;
+    transform: scale(0.75);
 }
 
 .profile-buttons>button:hover {
