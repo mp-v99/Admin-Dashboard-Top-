@@ -64,21 +64,21 @@ h1, h2, h3, h4, h5, h6 {
 body {
     height: 100vh;
     width: 100vw;
-    background-color: #0E0E0E;
-    display: grid;
+    display: flex;
 }
 
 .dashboard_container {
-    width: clamp(500px, 100%, 1312px);
-    min-width: 1240px;
+    width: clamp(1312px, 100%, 1902px);
     max-height: 100%;
 
-    justify-self: center;
-
     display: grid;
-    grid-template: 17.2fr 82.7fr / 21.06fr 78.93fr; 
+    grid-template: 17.2fr 82.7fr / 18fr 82fr; 
 
     background: #e2e8f0;
+
+    flex: auto;
+
+    overflow: auto;
 }
 
 .main-content {
@@ -209,7 +209,7 @@ li>svg {
     box-shadow: 0px 4px 5px 0px #918f8f49;
 
     min-width: 943px;
-
+    min-height: 155px;
 }
 
 /* Search bar container: */
@@ -330,11 +330,11 @@ li>svg {
 }
 
 .profile-picture>img {
-    height: 64%;
-    width: 72%;
-
+    
     border-radius: 50%;
-    opacity: 1;
+    
+    width: 50px;
+    height: 50px;
 }
 
 /* Profile Name: */
@@ -372,18 +372,16 @@ li>svg {
 
 .profile-welcome {
     display: grid;
-    grid-template-columns: 20fr 80fr;
+    grid-template-columns: 15fr 85fr;
 }
 
 .profile-welcome>.profile-picture {
-    justify-content: flex-end;
-
-    padding-right: 19px;
+    justify-content: center;
 }
 
 .profile-welcome>.profile-picture>img{
-    height: 74.5%;
-    width: 61%;
+    height: 70px;
+    width: auto;
 
     border-radius: 50%;
 }
@@ -416,7 +414,7 @@ li>svg {
 }
 
 .profile-buttons>button {
-    height: 39%;
+    height: 49%;
     width: 78%;
 
     justify-self: center;
@@ -434,8 +432,7 @@ li>svg {
 
 .profile-buttons>button>p {
     font-weight: bold;
-    font-size: 1px;
-    transform: scale(0.75);
+    font-size: xx-small;
 }
 
 .profile-buttons>button:hover {
@@ -455,7 +452,7 @@ li>svg {
 
 .main-content {
     display: grid;
-    grid-template-columns: 72fr 28fr;
+    grid-template-columns: 62fr 38fr;
     grid-template-rows: 50fr 50fr;
 }
 
@@ -491,16 +488,18 @@ li>svg {
     grid-row: 2 / 3;
 
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(228px, 1fr));
-    grid-template-rows: 30fr 30fr 40fr;
-    column-gap: 20px;
-    row-gap: 23px;
+    grid-template-columns: repeat(2, minmax(300px, 510px));
+    grid-template-rows: repeat(3, 1fr);
+    column-gap: 50px;
+    row-gap: 20px;
 
     font-size: 8px;
 
     padding-left: 16px;
     padding-right: 16px; 
     padding-top: 5px;
+
+    max-height: 657px;
 }
 
 .project-cards>.project-card {
@@ -514,10 +513,12 @@ li>svg {
     border-left: 8px solid #f0b429;
     border-radius: 12px;
 
-    width: clamp(250px, 100%, 350px);
-    height: 200px;
+    width: clamp(300px, 100%, 600px);
+    height: clamp(100px, 100%, 200px);
 
     box-shadow: 3px 4px 2px 0px #d4d9e1;
+
+    padding: 0px 20px 0px 20px;
 }
 
 .project-card>div {
@@ -533,8 +534,7 @@ li>svg {
     display: flex;
     align-items: flex-end;
 
-    font-size: 1px;
-    transform: scale(0.9);
+    font-size: x-small;
 }
 
 .card-description {
@@ -544,8 +544,7 @@ li>svg {
     color: rgba(106,106,106,255);
     line-height: 1;
 
-    font-size: 1px;
-    transform: scale(0.9);
+    font-size: xx-small;
 }
 
 .card-icons {
@@ -578,7 +577,7 @@ li>svg {
     grid-row: 1 / 2;
 
     display: grid;
-    grid-template-rows: 15fr 85fr;
+    grid-template-rows: 16fr 84fr;
 }
 
 .main-announcements>title {
@@ -586,88 +585,59 @@ li>svg {
 }
 
 .announcements-card {
-    display: flex;
-    flex-direction: column;
+    
 
     background: #ffffff;
 
-    width: 88.5%;
+    width: 55.5%;
     min-width: 236.8px;
     height: 95%;
     max-height: 303px;
-    overflow: hidden;
 
     border-radius: 8px;
     box-shadow: 3px 4px 2px 0px #d4d9e1;
 
-    opacity: 1;
-
-    padding-left: 25px;
-    
-    padding-bottom: 20px;
+    overflow: auto;
 }
 
 .announcement {
-    flex: auto;
-    flex-wrap: wrap;
+    max-height: fit-content;
 
-    display: grid;
-    grid-template-rows: 10fr 30fr 40fr 10fr;
-    grid-template-columns: 10fr 80fr 10fr;
+    display: flex;
+    flex-direction: column;
+
+    padding: 20px 40px 20px 40px;
 }
 
 .announcement-title {
-    grid-row: 2 / 3;
-    grid-column: 2 / 3;
-
-    max-height: 23px;
-    max-width: 180px;
-
-    overflow: hidden;
-
-    align-self: flex-end;
+    display: flex;
+    align-items: flex-end;
 }
 
 .announcement-title>p {
     font-weight: bold;
-    font-size: 1px;
-    transform: scale(0.7);
-    display: inline-block;
-    transform-origin: left;
-    width: fit-content;
-    height: fit-content;
+    font-size: 16px;
     overflow: hidden;
+
 }
 
 .announcement-description {
-
     color: rgba(106,106,106,255);
-    
-    grid-row: 3 / 4;
-    grid-column: 2 / 3;
-
-
-    overflow: visible;
-
-    max-height: 5px;
 }
 
 .announcement-description>p {
-    line-height: 0.8;
+    line-height: 1;
 
 
-    font-size: 1px;
-    transform: scale(0.7);
-    display: inline-block;
-    transform-origin: left;
-    width: 270px;
-    height: 50px;
+    font-size: xx-small;
 
     overflow: hidden;
 
     align-self: flex-start;
 
     border-bottom: #d2d2d2 1px solid;
+
+    padding-bottom: 10px;
 }
 
 .three>.announcement-description>p {
@@ -690,7 +660,7 @@ li>svg {
 .trending-card {
     background: #ffffff;
 
-    width: 88.5%;
+    width: 55.5%;
     min-width: 236.8px;
     height: 95%;
     max-height: 292px;
@@ -704,6 +674,7 @@ li>svg {
     box-shadow: 3px 4px 2px 0px #d4d9e1;
 
     padding-top: 15px;
+    padding-left: 10px;
 }
 
 .trending-pictures {
@@ -714,15 +685,20 @@ li>svg {
     grid-template-rows: repeat(4, 1fr);
 
     max-height: 320px;
+
+    padding-right: 20px;
 }
 
 .trending-pictures>img {
-    height: 75%;
-    width: auto;
-
-    transform: scale(0.9);
+    height: 50px;
+    width: 50px;
 
     justify-self: flex-end;
+}
+
+.trending-pictures>#morgan-picture {
+    height: 48px;
+    width: 48px;
 }
 
 .trending-users {
@@ -736,14 +712,11 @@ li>svg {
 }
 
 .trending-user>.username {
-    font-size: 1px;
-
-    transform: scale(0.9);
+    font-size: 18px;
 }
 
 .trending-user>.trending-project {
-    font-size: 1px;
+    font-size: 12px;
     color: rgba(106,106,106,255);
 
-    transform: scale(0.9);
 }
